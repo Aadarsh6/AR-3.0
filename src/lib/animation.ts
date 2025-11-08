@@ -3,7 +3,7 @@
 // Framer Motion variants for consistent motion design
 // ═══════════════════════════════════════════════════════════════
 
-import { Variants, Transition } from 'framer-motion'
+import type { Variants, Transition } from 'framer-motion'
 
 // ────────────────────────────────────────────────────────────
 // TIMING CONSTANTS
