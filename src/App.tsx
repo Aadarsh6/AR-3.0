@@ -1,4 +1,6 @@
+import About from "./component/About"
 import Hero from "./component/Hero"
+import Work from "./component/Work"
 import { useSmoothScroll } from "./lib/smoothScroll"
 
 const App = () => {
@@ -8,6 +10,9 @@ const App = () => {
     <main className="relative">
       <Hero/>
 
+      <About/>
+
+      <Work/>
         {/* Placeholder for other sections (we'll build these next) */}
       <div className="section-container">
         <div className="content-width text-center">
