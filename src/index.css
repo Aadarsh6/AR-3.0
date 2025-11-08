@@ -2,7 +2,7 @@
 
 
 
-@theme {
+:root {
   /* ────────────────────────────────────────────────────────────
      CUSTOM DESIGN TOKENS
      ──────────────────────────────────────────────────────────── */
@@ -34,6 +34,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* remove mobile tap highlight */
 }
 
 html {
@@ -163,6 +164,16 @@ p {
   }
 }
 
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .breathing,
+  .fade-in-up,
+  .link-hover::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* ────────────────────────────────────────────────────────────
    LINK HOVER EFFECT
    ──────────────────────────────────────────────────────────── */
@@ -173,14 +184,14 @@ p {
 }
 
 .link-hover::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--color-accent);
-  transition: width 0.3s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
 }
 
 .link-hover:hover::after {
