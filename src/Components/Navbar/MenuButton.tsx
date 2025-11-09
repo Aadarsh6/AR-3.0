@@ -1,3 +1,5 @@
+import { MenuIcon } from "lucide-react"
+
 //@ts-ignore
 const MenuButton = ({isOpen, setIsOpen}) => {
 return (
@@ -10,18 +12,7 @@ return (
                   border border-neutral-200"
       aria-label="Toggle menu"
     >
-      <span
-        className={`block w-6 h-0.5 bg-neutral-900 transform transition-all 
-                duration-300 ease-in-out
-                ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-      <span
-        className={`block w-6 h-0.5 bg-neutral-900 transition-opacity 
-                duration-300 ease-in-out
-                ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-      <span
-        className={`block w-6 h-0.5 bg-neutral-900 transform transition-all 
-                duration-300 ease-in-out
-                ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        {isOpen ? <div className="text-black/80 font-semibold text-2xl">X</div> :<MenuIcon className="text-black"/>}
     </button>
   )
 }
