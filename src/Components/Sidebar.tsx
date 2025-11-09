@@ -1,12 +1,12 @@
 //@ts-ignore
 const Sidebar = ({isOpen}) => {
-  return (
+   return (
     <nav 
       className={`fixed inset-0 flex items-center justify-center z-40 pointer-events-none`}
     >
       {/* Circular expanding overlay from top-right corner */}
       <div 
-        className={`absolute top-0 right-0 bg-black rounded-full transition-all duration-2000 ease-in-out ${
+        className={`absolute bg-neutral-900 rounded-full transition-all duration-2000 ease-in-out ${
           isOpen 
             ? 'w-[300vmax] h-[300vmax]' 
             : 'w-0 h-0'
@@ -20,7 +20,7 @@ const Sidebar = ({isOpen}) => {
       
       {/* Menu items */}
       <ul 
-        className={`relative z-10 space-y-6 md:space-y-8 text-center transition-all duration-500 ${
+        className={`relative z-10 space-y-4 md:space-y-6 text-center transition-all duration-500 px-6 ${
           isOpen 
             ? 'opacity-100 delay-300 pointer-events-auto' 
             : 'opacity-0 pointer-events-none'
@@ -39,8 +39,9 @@ const Sidebar = ({isOpen}) => {
             }}
           >
             <a 
-              href="#" 
-              className="text-3xl md:text-4xl lg:text-5xl font-black text-white hover:text-gray-400 transition-colors duration-300 inline-block tracking-wide"
+              href={`#${item.toLowerCase().replace(' ', '-')}`}
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white hover:text-neutral-300 transition-all duration-300 inline-block tracking-wide
+              hover:scale-105 active:scale-95"
             >
               {item}
             </a>
