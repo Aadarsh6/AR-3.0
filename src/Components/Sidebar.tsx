@@ -20,7 +20,7 @@ const Sidebar = ({isOpen}) => {
       
       {/* Menu items */}
       <ul 
-        className={`relative z-10 space-y-4 md:space-y-6 text-center transition-all duration-500 px-6 ${
+        className={`relative z-10 flex flex-col gap-2 text-center transition-all duration-500 px-6 ${
           isOpen 
             ? 'opacity-100 delay-300 pointer-events-auto' 
             : 'opacity-0 pointer-events-none'

@@ -47,7 +47,7 @@ const Hero = ({ isOpen }) => {
             AR
           </span>
         </h1>
-
+        
         {/* Subtitle with icons */}
         <p className="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed mb-12 font-medium">
           Full-Stack Architect 👨‍💻 
