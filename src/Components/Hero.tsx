@@ -32,7 +32,7 @@ return (
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-neutral-200 mb-6 leading-tight">
         {' '}
-        HEY 👋, I'M{' '}
+        HEY , I'M{' '}
         <span className="inline-block text-white">
             {' '}
             AR
