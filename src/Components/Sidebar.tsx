@@ -4,7 +4,6 @@ const Sidebar = ({isOpen}) => {
     <nav 
       className={`fixed inset-0 flex items-center justify-center z-40 pointer-events-none`}
     >
-      {/* Circular expanding overlay from top-right corner */}
       <div 
         className={`absolute bg-neutral-900 rounded-full transition-all duration-2000 ease-in-out ${
           isOpen 
@@ -18,7 +17,6 @@ const Sidebar = ({isOpen}) => {
         }}
       />
       
-      {/* Menu items */}
       <ul 
         className={`relative z-10 flex flex-col gap-2 text-center transition-all duration-500 px-6 ${
           isOpen 
