@@ -1,34 +1,34 @@
-import { useState } from "react"
-import Hero from "./Components/Hero"
-import MenuButton from "./Components/Navbar/MenuButton"
-import Sidebar from "./Components/Sidebar"
-import About from "./Components/About"
-import TechStack from "./Components/TechStack"
-import Experience from "./Components/Experience"
-import Projects from "./Components/Projects"
-import Blogs from "./Components/Blogs"
-import { Contact } from "lucide-react"
-import Footer from "./Components/Footer"
+import { useState } from "react";
+import MenuButton from "./Components/Navbar/MenuButton";
+// import { Sidebar } from "lucide-react";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import TechStack from "./Components/TechStack";
+import Sidebar from "./Components/Navbar/Sidebar";
+import Experience from "./Components/Experience";
+import Projects from "./Components/Projects";
+import Blogs from "./Components/Blogs";
+import { Contact } from "lucide-react";
+import Footer from "./Components/Footer";
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-linear-to-br from-neutral-50 via-white to-neutral-100">
-      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <Sidebar isOpen={isOpen}/>
-      <Hero isOpen={isOpen}/>
-      <div className="bg-neutral-950">
+    <div className="relative min-h-screen overflow-x-hidden bg-neutral-950">
+      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Hero isOpen={isOpen} />
       <About />
       <TechStack />
-      <Experience />
+      <Experience/>
       <Projects />
       <Blogs />
       <Contact />
       <Footer />
-    </div>
-    </div>
-  )
-}
 
-export default App
+    </div>
+  );
+};
+
+export default App;
